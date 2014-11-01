@@ -63,6 +63,79 @@ Install it globally `npm install -g biojs-io-blast` and then you can pipe direct
 ```
 cat <blast-file.xml> | biojs-blast
 ```
+## Output
+
+* there can be multiple iterations
+* there can be multiple per hits per iteration
+* there can be multiple HSPS per hit
+
+### Full example
+
+```
+{
+    "program": "blastp",
+    "version": "BLASTP 2.2.29+",
+    "reference": "Stephen F. Altschul, Thomas L. Madden, Alejandro A. Sch&auml;ffer, Jinghui Zhang, Zheng Zhang, Webb Miller, and David J. Lipman (1997), \"Gapped BLAST and PSI-BLAST: a new generation of protein database search programs\", Nucleic Acids Res. 25:3389-3402.",
+    "db": "/home/xsebi/tmp/blast/swiss",
+    "query-ID": "Query_1",
+    "query-def": "sp|Q8NF91|SYNE1_HUMAN Nesprin-1 OS=Homo sapiens GN=SYNE1 PE=1 SV=4",
+    "query-len": "8797",
+    "param": {
+        "matrix": "BLOSUM62",
+        "expect": "10",
+        "gap-open": "11",
+        "gap-extend": "1",
+        "filter": "F"
+    },
+    "iterations": [
+        {
+            "iter-num": "1",
+            "query-ID": "Query_1",
+            "query-def": "sp|Q8NF91|SYNE1_HUMAN Nesprin-1 OS=Homo sapiens GN=SYNE1 PE=1 SV=4",
+            "query-len": "8797",
+            "hits": [
+                {
+                    "num": "1",
+                    "id": "gnl|BL_ORD_ID|140988",
+                    "def": "gi|425906075|sp|Q8NF91.4|SYNE1_HUMAN RecName: Full=Nesprin-1; AltName: Full=Enaptin; AltName: Full=Myocyte nuclear envelope protein 1; Short=Myne-1; AltName: Full=Nuclear envelope spectrin repeat protein 1; AltName: Full=Synaptic nuclear envelope protein 1; Short=Syne-1 [Homo sapiens]",
+                    "accession": "140988",
+                    "len": "8797",
+                    "hsps": [
+                        {
+                            "num": "1",
+                            "bit-score": "17954.1",
+                            "score": "46598",
+                            "evalue": "0",
+                            "query-from": "1",
+                            "query-to": "8797",
+                            "hit-from": "1",
+                            "hit-to": "8797",
+                            "query-frame": "0",
+                            "hit-frame": "0",
+                            "identity": "8797",
+                            "positive": "8797",
+                            "gaps": "0",
+                            "align-len": "8797",
+                            "qseq": "MATSRGASRCPR...",
+                            "hseq": "MATSRGASRCPR...",
+                            "midline": "MATSRGASRCPR..."
+                        }
+                    ]
+            "stat": {
+                "db-num": "459767",
+                "db-len": "171814008",
+                "hsp-len": "143",
+                "eff-space": "917906647858",
+                "kappa": "0.041",
+                "lambda": "0.267",
+                "entropy": "0.14"
+            }
+        }
+    ]
+}
+```
+
+
 
 ## Contributing
 
