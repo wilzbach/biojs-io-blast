@@ -56,6 +56,14 @@ Parses the BLAST XML output to JSON.
 blast.parse('<BlastOutput><BlastOutput_program>blastp</BlastOutput_program></BlastOutput>'); 
 ```
 
+## CLI version
+
+Install it globally `npm install -g biojs-io-blast` and then you can pipe directly into the parser. 
+
+```
+cat <blast-file.xml> | biojs-blast
+```
+
 ## Contributing
 
 Please submit all issues and pull requests to the [greenify/biojs-io-blast](http://github.com/greenify/biojs-io-blast) repository.
