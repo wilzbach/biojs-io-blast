@@ -9,7 +9,7 @@
 It parses the XML output of BLAST. You can activate the XML output by adding the 
 `-outfmt 5` flag to your BLAST program.
 
-[More info about BLAST](http://www.ncbi.nlm.nih.gov/books/NBK143764/)
+[More info about BLAST](http://www.ncbi.nlm.nih.gov/books/NBK143764/)  
 
 ## Getting Started
 Install the module with: `npm install biojs-io-blast`
@@ -136,6 +136,7 @@ cat <blast-file.xml> | biojs-blast
 }
 ```
 
+[Official BLAST XML spec](ftp://ftp.ncbi.nlm.nih.gov/blast/documents/xml/README.blxml)
 
 
 ## Contributing
