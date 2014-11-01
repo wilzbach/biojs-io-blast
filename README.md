@@ -2,7 +2,6 @@
 
 [![NPM version](http://img.shields.io/npm/v/biojs-io-blast.svg)](https://www.npmjs.org/package/biojs-io-blast)
 [![Build Status](https://secure.travis-ci.org/greenify/biojs-io-blast.png?branch=master)](http://travis-ci.org/greenify/biojs-io-blast)
-[![Coverage Status](https://img.shields.io/coveralls/greenify/biojs-io-blast.svg)](https://coveralls.io/r/greenify/biojs-io-blast)
 [![NPM version](https://badge-me.herokuapp.com/api/npm/biojs-io-blast.png)](http://badges.enytc.com/for/npm/biojs-io-blast) 
 
 > BLAST parser

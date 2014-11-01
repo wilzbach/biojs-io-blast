@@ -1,7 +1,7 @@
 {
   "name": "biojs-io-blast",
   "description": "BLAST parser",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "homepage": "https://github.com/greenify/biojs-io-blast",
   "author": {
     "name": "greenify",
