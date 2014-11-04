@@ -72,6 +72,8 @@ cat <blast-file.xml> | biojs-blast
 
 ### Full example
 
+![entity diagram](http://i.imgur.com/icB9EuG.png)
+
 ```
 {
     "program": "blastp",
