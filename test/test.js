@@ -20,8 +20,9 @@ var blast = require("../");
 describe('biojs-io-blast module', function(){
   var result,hits;
   before(function(){
-    var str = require("fs").readFileSync(__dirname + "/dummy/single.xml");
+    var str = require("fs").readFileSync(__dirname + "/dummy/ebi.xml");
     result = blast.parse(str);
+    console.log(result);
     hits = result.iterations[0].hits;
   })
   it('basic equality', function(){
