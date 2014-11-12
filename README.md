@@ -25,6 +25,8 @@ blast.read("http://files.biojs.net/blast/examples/syne1.xml", function(data){
 
 ## Documentation
 
+[BLAST: short recap (with the output format)](https://docs.google.com/presentation/d/1OtYi-ihHapeHRq_PTc3fi7grnbHoXMbJBJI4Yq1kKGo/present?usp=sharing&slide=id.p)
+
 #### .read(url)
 
 **Parameter**: `URL of a BLAST output (in xml)`
@@ -73,6 +75,8 @@ cat <blast-file.xml> | biojs-blast
 ### Full example
 
 ![entity diagram](http://i.imgur.com/icB9EuG.png)
+
+[Official BLAST XML spec](http://tinyurl.com/ncbi-blast-xml)
 
 ```
 {
@@ -137,9 +141,6 @@ cat <blast-file.xml> | biojs-blast
     ]
 }
 ```
-
-[Official BLAST XML spec](http://tinyurl.com/ncbi-blast-xml)
-
 
 ## Contributing
 
