@@ -50,6 +50,13 @@ describe('NCBI format', function(){
     equal(hits[26].hsps[0]["hit-to"], 258);
     equal(hits[26].hsps[0]["qseq"], "EQEIVQKRTFTKWINSHLAKRKPPMVVDDLFEDMKDGVKLLALLEVLSGQKLPCEQGRRMKRIHAVANIGTALKFLEGRKIKLVNINSTDIADGRPSIVLGLMWTIILYFQIEELTSNLPQLQSLSSSASSVDSIVSSETPSPPSKRKVTTKIQGNAKKALLKWVQYTAGKQTGIEVKDFGKSWRSGVAFHSVIHAIRPELVDLETVKG-RSNRENLEDAFTIAETELGIPRLLDPEDVDVDKPDEKSIMTYVAQFLKHYPDIHNASTDGQEDDEILPGFP");
   });
+  it('should return numeric values', function(){
+    equal(hits[26].accession, 139969);
+    equal(hits[26].hsps[0]["bit-score"], 193.356);
+    equal(typeof result["query-len"], "number", "query-len should be an int");
+    equal(typeof result.param["expect"], "number", "query params should be an int");
+  });
+
 });
 
 describe('EBI format', function(){
