@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 var fs = require('fs');
 var blast = require('../index.js');
+var concat = require('concat-stream');
 
 // TODO: find a more reliable way to detect empty stdin
 if (process.stdin.isTTY) {
@@ -10,9 +11,11 @@ if (process.stdin.isTTY) {
 }
 
 function withPipe() {
-  var str = fs.readFileSync('/dev/stdin');
-  var dat = blast.parse(str);
-  process.stdout.write(JSON.stringify(dat));
+  function callback(str){
+    process.stdout.write(JSON.stringify(blast.parse(str)));
+  }
+  var con = concat(callback);
+  process.stdin.pipe(con);
 }
 
 function withoutPipe() {
