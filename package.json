@@ -1,7 +1,7 @@
 {
   "name": "biojs-io-blast",
   "description": "BLAST parser",
-  "version": "0.0.6",
+  "version": "0.0.9",
   "homepage": "https://github.com/greenify/biojs-io-blast",
   "author": {
     "name": "greenify",
@@ -20,7 +20,7 @@
       "url": "https://github.com/greenify/biojs-io-blast/blob/master/LICENSE"
     }
   ],
-  "main": "lib/biojs-io-blast",
+  "main": "lib/blast.js",
   "scripts": {
     "test": "gulp",
     "build": "gulp build",
@@ -31,6 +31,7 @@
     "watch": "gulp watch"
   },
   "dependencies": {
+    "biojs-io-parser": "^1.0.0",
     "concat-stream": "^1.4.7",
     "nets": "^1.0.0",
     "xmldoc": "^0.1.2"

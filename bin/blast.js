@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 var fs = require('fs');
-var blast = require('../index.js');
+var blast = require('..');
 var concat = require('concat-stream');
 
 // TODO: find a more reliable way to detect empty stdin

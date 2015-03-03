@@ -27,27 +27,39 @@ blast.read("http://files.biojs.net/blast/examples/syne1.xml", function(data){
 
 [BLAST: short recap (with the output format)](https://docs.google.com/presentation/d/1OtYi-ihHapeHRq_PTc3fi7grnbHoXMbJBJI4Yq1kKGo/present?usp=sharing&slide=id.p)
 
-#### .read(url)
+#### `.read(url)`
 
 **Parameter**: `URL of a BLAST output (in xml)`
 **Type**: `String`
 **Example**: `http://files.biojs.net/blast/examples/syne1.xml`
 
-**Parameter**: `Callback`
+**Parameter**: `Callback` or promise
 **Type**: `function`
 
 Downloads the XML BLAST file and parses it to JSON.
 
 ```javascript
-blast.read('http://files.biojs.net/blast/examples/syne1.xml', function(data){
+blast.read('http://files.biojs.net/blast/examples/syne1.xml', function(err, data){
 	console.log("blast object", data);
 }); 
 ```
 
+If you don't specify a callback, it will return a promise.
+
+```javascript
+var p = blast.read("https://raw.githubusercontent.com/greenify/biojs-io-blast/master/test/dummy/single.xml");
+p.then(function(model) {
+    // model is the parsed url
+}, function(err){
+    console.error("err happened during downloading", err);
+});
+```
+
+
 As downloading the file is asynchronous, it will call your callback with the
 resulting data object.
 
-#### .parse(str)
+#### `.parse(str)`
 
 **Parameter**: `XML Output of BLAST`
 **Type**: `String`
