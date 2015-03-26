@@ -33,7 +33,6 @@
   "dependencies": {
     "biojs-io-parser": "^1.0.0",
     "concat-stream": "^1.4.7",
-    "nets": "^1.0.0",
     "xmldoc": "^0.1.2"
   },
   "devDependencies": {
