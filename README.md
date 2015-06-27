@@ -21,7 +21,7 @@ blast.read("http://files.biojs.net/blast/examples/syne1.xml", function(data){
 }); 
 ```
 
-[Play on JSBin](http://jsbin.com/cidoga/1/edit?js,console)
+[Play on JSBin](http://jsbin.com/fufaxezawa/edit?js,console)
 
 ## Documentation
 
